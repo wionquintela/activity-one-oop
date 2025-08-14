@@ -3,15 +3,15 @@ public class Main {
     
         //1.
        System.out.println("\nSample Output:\n");
-       Person personOne = new Person("LeBron James", 40);
-       Person personTwo = new Person("Cristiano Ronaldo", 45);
+       Person personOne = new Person("Claude Xiana", 3);
+       Person personTwo = new Person("Chris Xian", 9);
 
        personOne.displayInfo();
        personTwo.displayInfo();
 
        System.out.println("\nSet new age and name:\n");
-       personOne.setNewInfo("Ishowspeed", 21);
-       personTwo.setNewInfo("Isaac Newton", 70);
+       personOne.setNewInfo("Claude Xiana", 9);
+       personTwo.setNewInfo("Chris Xian", 15);
        personOne.displayInfo();
        personTwo.displayInfo();
 
@@ -19,22 +19,22 @@ public class Main {
 
        //2.
        System.out.println("\nSample output:");
-        Rectangle recOne = new Rectangle(2, 3);
+        Rectangle recOne = new Rectangle(12, 7);
         recOne.displayInfo();
-        recOne.setNewDimension(9, 5);
+        recOne.setNewDimension(12, 6);
 
         System.out.println("\n");
 
        //3.
-       Employee employeeOne = new Employee("Lebron James", "Basketball Player", 230_000);
-       Employee employeeTwo = new Employee("Cristiano Ronaldo", "Football Player", 450_000);
-       System.out.println("\nSample output:");
+       Employee employeeOne = new Employee("Juan Dela Cruz", "HR Manager", 40_000);
+       Employee employeeTwo = new Employee("Andreas Hobard", "Software Engineer", 60_000);
+       System.out.println("\nSample output:\nEmployee Details:");
        employeeOne.displayInfo();
        employeeTwo.displayInfo();
       
        System.out.println("\nAfter raising salary:\n");
-       employeeOne.updateSalary(5);
-       employeeTwo.updateSalary(3);
+       employeeOne.updateSalary(8, 8);
+       employeeTwo.updateSalary(12, 12);
 
 
     }
@@ -105,8 +105,8 @@ class Employee {
         System.out.println("Name: " + name + "\nJob Title: " + jobTitle + "\nSalary: " + salary);
     }
 
-    public void updateSalary(double percent) {
+    public void updateSalary(int percentPlaceHolder, double percent) {
         salary += salary * (percent/100);
-        System.out.println(""+ percent +"% for ' " + name + " ':\nName: " + name + "\nJob Title: " + jobTitle + "\nNew Salary: " + salary + "\n");
+        System.out.println(percentPlaceHolder + "% for ' " + name + " ':\nName: " + name + "\nJob Title: " + jobTitle + "\nNew Salary: " + salary + "\n");
     }
 }
