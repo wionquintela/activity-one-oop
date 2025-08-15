@@ -2,14 +2,14 @@ public class Main {
     public static void main (String[] args) {
     
         //1.
-       System.out.println("\n1. CLASS PERSON");
+       System.out.println("\nSample Output:\n");
        Person personOne = new Person("LeBron James", 40);
        Person personTwo = new Person("Cristiano Ronaldo", 45);
 
        personOne.displayInfo();
        personTwo.displayInfo();
 
-       System.out.println("\nSet new name and age:\n");
+       System.out.println("\nSet new age and name:\n");
        personOne.setNewInfo("Ishowspeed", 21);
        personTwo.setNewInfo("Isaac Newton", 70);
        personOne.displayInfo();
@@ -18,7 +18,7 @@ public class Main {
        System.out.println("\n");
 
        //2.
-       System.out.println("2. CLASS RECTANGLE");
+       System.out.println("\nSample output:");
         Rectangle recOne = new Rectangle(2, 3);
         recOne.displayInfo();
         recOne.setNewDimension(9, 5);
@@ -28,11 +28,11 @@ public class Main {
        //3.
        Employee employeeOne = new Employee("Lebron James", "Basketball Player", 230_000);
        Employee employeeTwo = new Employee("Cristiano Ronaldo", "Football Player", 450_000);
-       System.out.println("3.CLASS EMPLOYEES\nEmployee Details");
+       System.out.println("\nSample output:");
        employeeOne.displayInfo();
        employeeTwo.displayInfo();
       
-       System.out.println("\nAfter raising salary:");
+       System.out.println("\nAfter raising salary:\n");
        employeeOne.updateSalary(5);
        employeeTwo.updateSalary(3);
 
@@ -50,7 +50,7 @@ class Person {
     }
 
     public void displayInfo() {
-        System.out.println("\t" + name + " is " + age + " years old.");
+        System.out.println(name + " is " + age + " years old.\n");
     }
 
     public void setNewInfo(String newName, int newAge) {
@@ -75,8 +75,8 @@ class Rectangle {
     }
 
     public void displayInfo() {
-        System.out.println("\tThe area of rectangle is " + area);
-        System.out.println("\tThe perimeter of rectangle is " + perimeter);
+        System.out.println("The area of rectangle is " + area);
+        System.out.println("The perimeter of rectangle is " + perimeter);
     }
 
     public void setNewDimension(float width, float height) {
@@ -84,8 +84,8 @@ class Rectangle {
         this.height = height;
         this.area = width * height;
         this.perimeter = 2 * (width + height);
-        System.out.println("\n\tThe area of rectangle is now " + area);
-        System.out.println("\tThe perimeter of rectangle is now " + perimeter);
+        System.out.println("\nThe area of rectangle is now " + area);
+        System.out.println("The perimeter of rectangle is now " + perimeter);
     }
 }
 
@@ -102,11 +102,11 @@ class Employee {
     }
 
     public void displayInfo() {
-        System.out.println("\tName: " + name + "\n\tJob Title: " + jobTitle + "\n\tSalary: " + salary + "\n");
+        System.out.println("Name: " + name + "\nJob Title: " + jobTitle + "\nSalary: " + salary);
     }
 
     public void updateSalary(double percent) {
         salary += salary * (percent/100);
-        System.out.println("\t"+ percent +"% for ' " + name + " ':\n\tName: " + name + "\n\tJob Title: " + jobTitle + "\n\tNew Salary: " + salary + "\n");
+        System.out.println(""+ percent +"% for ' " + name + " ':\nName: " + name + "\nJob Title: " + jobTitle + "\nNew Salary: " + salary + "\n");
     }
 }
